@@ -64,7 +64,7 @@ function InputBox() {
   };
   return (
     <div className="rounded-2xl shadow-md text-gray-500 front-medium mt-6 p-2 bg-white">
-      <div className="flex space-x-4 items-center p-4">
+      <div className="flex items-center space-x-1 p-1 sm:space-x-4 sm:p-4">
         <Image
           className="rounded-full"
           width={40}
@@ -74,7 +74,7 @@ function InputBox() {
         />
         <form className="flex flex-1">
           <input
-            className="rounded-full h-12 bg-gray-100 focus:outline-none flex-grow px-5"
+            className="rounded-full w-full h-12 bg-gray-100 focus:outline-none flex-grow px-5"
             type="text"
             ref={inputref}
             placeholder={`What's on your mind, ${session.user.name}?`}
@@ -97,10 +97,10 @@ function InputBox() {
           </div>
         )}
       </div>
-      <div className="flex justify-evenly p-3 border-t">
+      <div className="flex flex-col sm:flex-row justify-between items-center sm:justify-evenly s-1 sm:p-3 border-t pt-2 sm:pt-0">
         <div className="customIcon">
-          <VideoCameraIcon className="h-7 text-red-500" />
-          <p className="text-xs sm:text-sm xl:text-base">Live Video</p>
+          <VideoCameraIcon className="h-5 sm:h-7 text-red-500" />
+          <p className="text-xs sm:text-sm xl:text-base">LiveVideo</p>
         </div>
         <div
           onClick={() => {
@@ -108,7 +108,7 @@ function InputBox() {
           }}
           className="customIcon"
         >
-          <CameraIcon className="h-7 text-green-500" />
+          <CameraIcon className="h-5 sm:h-7 text-green-500" />
           <p className="text-xs sm:text-sm xl:text-base">Photo/Video</p>
           <input
             ref={filePickerRef}
@@ -118,7 +118,7 @@ function InputBox() {
           />
         </div>
         <div className="customIcon">
-          <EmojiHappyIcon className="h-7 text-yellow-500" />
+          <EmojiHappyIcon className="h-5 sm:h-7 text-yellow-500" />
           <p className="text-xs sm:text-sm xl:text-base">Feeling/Activity</p>
         </div>
       </div>

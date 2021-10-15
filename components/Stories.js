@@ -29,7 +29,7 @@ const stories = [
 ];
 function Stories() {
   return (
-    <div className="flex justify-center space-x-2 mx-auto">
+    <div className="flex justify-center space-x-1 sm:space-x-2 mx-auto">
       {stories.map((story) => {
         return (
           <StoryCard
